@@ -2,6 +2,8 @@ server:
   port: 8008
   servlet:
     context-path: /jpa-demo-api
+    session:
+      timeout: 30m
 spring:
   datasource:
     druid:
@@ -11,9 +13,11 @@ spring:
       password: root
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: none  #create-每次启动重新创建表,update-只有当不一致的时候才会去创建
     properties:
-        hibernate:
-          dialect: org.hibernate.dialect.MySQL55Dialect
-        show-sql: true
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL55Dialect
+        format_sql: true  #用来格式化控制台sql语句
+      show-sql: true  #控制台输出是否显示sql语句
+
 
