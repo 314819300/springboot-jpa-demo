@@ -20,7 +20,7 @@
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <!--加入在操作数据库的时候，没有表，那么会根据实体类自动生成表create-每次启动创建表，update-没有表则创建，有表则更新数据-->
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit>
 </persistence>

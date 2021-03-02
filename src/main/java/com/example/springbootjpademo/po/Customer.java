@@ -54,8 +54,6 @@ public class Customer implements Serializable {
 	@Column(name = "cust_phone")
 	private String custPhone;
 
-
-
 	public Long getCustId() {
 		return custId;
 	}
