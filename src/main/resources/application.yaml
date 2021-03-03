@@ -17,11 +17,21 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL55Dialect
-        format_sql: true  #用来格式化控制台sql语句
-    show-sql: true  #控制台输出是否显示sql语句
+        format_sql: true  #用来格式化控制台sql语句,此处的值为Map<String, String>
+    show-sql: true  #控制台输出是否显示sql语句,此处的值为boolean值，所以显示的颜色与format_sql不一致
 #有关show-sql与format_sql参考以下
 #spring.jpa.show-sql=true
 #spring.jpa.properties.hibernate.format_sql=true
-#logging.level.org.hibernate.type.descriptor.sql.BasicBinder=trace
+
+#log配置
+#logging.path=/user/local/log
+#logging.level.com.favorites=DEBUG
+#logging.level.org.springframework.web=INFO
+#logging.level.org.hibernate=ERROR
+#path 为本机的 log 地址，logging.level 后面可以根据包路径配置不同资源的 log 级别
+
+
+
+
 
 
